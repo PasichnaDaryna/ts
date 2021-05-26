@@ -1,15 +1,22 @@
-let age: number = 5
-const name: string = "Mango"
 
+/*
+ * Generics (обобщения, обобщённые типы, дженерики)
+ *  Думайте о дженериках как о аргументе функции, в котором вы указываете тип других аргументов
+ *
+ * - [Обобщённые типы](https://canonium.com/articles/typescript-generics)
+ */
 
-let user: object
+/*
+ * Дженерик-функции с одним параметром
+ *  - any[] и потеря типизации
+ *  - Добавляем дженерик для аргумент-типа
+ *  - Как ТС выводит типы и как указать явно foo<тип>()
+ */
 
-user = {
+const isEqual = <T, Y>(a: T, b: Y) => {
+    return Object.is(a, b);
+};
 
-}
-
-
-let id: string | number | boolean = 5
 
 
 
